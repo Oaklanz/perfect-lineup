@@ -25,7 +25,7 @@ const validateLineup = (lineup) => {
     //returns false when lineup includes too many players from a single game
 
      const singleGame = (lineup) => {lineup.map(lineup => lineup.gameId)
-        
+
           let duplicateIds = [...new Set(gameIds)]
 
         let numberOfDuplicates = []
@@ -37,6 +37,16 @@ const validateLineup = (lineup) => {
 
     }
     //returns false when lineup includes too many players
+
+     const numberOfPlayers = (lineup) => {
+         lineup.map(lineup.id).reduce((accm, val) => accm  + val, 0)
+
+         if (numberOfPlayers > 9 )
+        return false 
+     }
+
+
+
     //eturns false when the lineup does not have the right number of players at each position'
     //returns false when the lineup includes too few players from a single position'
     //returns false when the lineup does not include a player from a position'
