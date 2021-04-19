@@ -8,8 +8,7 @@ const validateLineup = (lineup) => {
     }
     
     //returns false when lineup includes too many players from a single team
-    //loop through array
-    //if 
+    
     const ManyPlayers = (lineup) =>{
          lineup.map(lineup => lineup.teamId) 
 
@@ -18,15 +17,23 @@ const validateLineup = (lineup) => {
          let numberOfDuplicates = [] 
          duplicateIds.forEach(duplicateId => {let count = teamIds.filter(teamId => teamId === duplicateId).lengthnumberOfDuplicates.push(count)} )
          
-         if (Math. max (numberOfDuplicates) > 2) 
-             return false 
-                                               
+         if (Math. max (numberOfDuplicates.ManyPlayers) > 2) 
+             return ManyPlayers, false; 
+
            }
                                 
-
     //returns false when lineup includes too many players from a single game
 
-     const lineupincludesTooManyPlayers = () => {return false
+     const singleGame = (lineup) => {lineup.map(lineup => lineup.gameId)
+        
+          let duplicateIds = [...new Set(gameIds)]
+
+        let numberOfDuplicates = []
+
+        duplicateIds.forEach(duplicateId => {let count = gameIds.filter(gameId => gameId === duplicateId).lengthnumberOfDuplicates.push(count)} )
+         
+         if (Math. max (numberOfDuplicates.singleGame) > 3) 
+             return singleGame, false
 
     }
     //returns false when lineup includes too many players
